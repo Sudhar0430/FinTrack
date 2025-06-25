@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6418,6 +6419,714 @@ button:active {
         margin-bottom: 15px;
     }
 }
+/* Toggle Switch Styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  transition: 0.4s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .login-container,
+body.dark-mode .main-content {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark-mode table {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+body.dark-mode .table th,
+body.dark-mode .table td {
+  border-color: #333;
+}
+
+body.dark-mode .btn,
+body.dark-mode button {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode select,
+body.dark-mode input[type="date"] {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #444;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  transition: 0.4s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+.mainContent {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+.investmentsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.investmentsHeader h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+}
+
+/* Buttons */
+#addInvestmentButton, 
+#floatingAddInvestmentButton,
+.submitFormButton,
+.cancelFormButton {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+#addInvestmentButton, 
+#floatingAddInvestmentButton {
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+}
+
+#addInvestmentButton:hover, 
+#floatingAddInvestmentButton:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.submitFormButton {
+    background-color: #2ecc71;
+    color: white;
+    margin-right: 10px;
+}
+
+.submitFormButton:hover {
+    background-color: #27ae60;
+}
+
+.cancelFormButton {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.cancelFormButton:hover {
+    background-color: #c0392b;
+}
+
+.editInvestmentButton, 
+.deleteInvestmentButton {
+    background: none;
+    border: none;
+    color: #7f8c8d;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: color 0.2s;
+}
+
+.editInvestmentButton:hover {
+    color: #3498db;
+}
+
+.deleteInvestmentButton:hover {
+    color: #e74c3c;
+}
+
+/* Summary Cards */
+.investmentsSummaryCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.investmentsSummaryCard {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.investmentsSummaryCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.investmentsSummaryCard h3 {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-top: 0;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.investmentsSummaryCard h3 i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.investmentsSummaryCard p {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+}
+
+.trend {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.trend i {
+    margin-right: 5px;
+}
+
+.trend.up {
+    color: #2ecc71;
+}
+
+.trend.down {
+    color: #e74c3c;
+}
+
+/* Investments List Section */
+.investmentsListSection {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.investmentsListHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.investmentsListHeader h2 {
+    font-size: 22px;
+    color: #2c3e50;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.investmentsListHeader h2 i {
+    margin-right: 10px;
+    color: #3498db;
+}
+
+.investmentsListControls {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#investmentsSearchInput,
+#investmentTypeFilterSelect,
+#investmentSortBySelect {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: white;
+}
+
+#investmentsSearchInput {
+    min-width: 250px;
+}
+
+/* Investment Items */
+.investmentsListContainer {
+    margin-top: 20px;
+}
+
+.investmentItem {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: #f8fafc;
+    transition: background-color 0.2s;
+}
+
+.investmentItem:hover {
+    background-color: #edf2f7;
+}
+
+.investmentIcon {
+    width: 50px;
+    height: 50px;
+    background-color: #e3f2fd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: #3498db;
+    font-size: 20px;
+}
+
+.investmentDetails {
+    flex-grow: 1;
+}
+
+.investmentName {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    color: #2c3e50;
+}
+
+.investmentMeta {
+    display: flex;
+    gap: 15px;
+    font-size: 13px;
+    color: #7f8c8d;
+    margin-bottom: 5px;
+}
+
+.investmentStats {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.investmentValue {
+    text-align: right;
+    margin-right: 20px;
+    min-width: 150px;
+}
+
+.currentValue {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.investmentReturn {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.investmentReturn.positive {
+    color: #2ecc71;
+}
+
+.investmentReturn.negative {
+    color: #e74c3c;
+}
+
+.investmentActions {
+    display: flex;
+}
+
+.emptyMessage {
+    text-align: center;
+    padding: 40px;
+    color: #7f8c8d;
+    font-size: 16px;
+}
+
+/* Analytics Section */
+.investmentsAnalyticsSection {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.investmentsAnalyticsSection h2 {
+    font-size: 22px;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.investmentsAnalyticsSection h2 i {
+    margin-right: 10px;
+    color: #3498db;
+}
+
+.analyticsRow {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.analyticsChart {
+    flex: 1;
+    min-width: 300px;
+    height: 300px;
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+/* Investment Tips */
+.investmentTips {
+    background-color: #f0f7ff;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.investmentTips h3 {
+    font-size: 18px;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.investmentTips h3 i {
+    margin-right: 10px;
+    color: #f39c12;
+}
+
+.tipItem {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #d6e4f0;
+}
+
+.tipItem:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.tipIcon {
+    width: 40px;
+    height: 40px;
+    background-color: #e3f2fd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3498db;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.tipContent h4 {
+    margin: 0 0 5px 0;
+    color: #2c3e50;
+    font-size: 16px;
+}
+
+.tipContent p {
+    margin: 0;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Modal Styles */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.modalOverlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.investmentModalContent {
+    background: white;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 25px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.closeModalButton {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #7f8c8d;
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: color 0.2s;
+}
+
+.closeModalButton:hover {
+    color: #e74c3c;
+}
+
+.investmentModalContent h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Form Styles */
+#investmentFormContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.investmentFormGroup {
+    margin-bottom: 15px;
+}
+
+.investmentFormGroup label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #555;
+    font-size: 14px;
+}
+
+.investmentFormGroup input,
+.investmentFormGroup select,
+.investmentFormGroup textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.investmentFormGroup textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.amountInput {
+    position: relative;
+}
+
+.amountInput span {
+    position: absolute;
+    left: 10px;
+    top: 33px;
+    font-weight: 500;
+}
+
+.amountInput input {
+    padding-left: 30px !important;
+}
+
+.formButtonsContainer {
+    grid-column: span 2;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+/* Floating Button (Mobile) */
+.floatingAddInvestmentButton {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 24px;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .investmentsHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    #addInvestmentButton {
+        margin-top: 15px;
+        width: 100%;
+    }
+    
+    .investmentsListControls {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    #investmentsSearchInput {
+        min-width: 100%;
+    }
+    
+    .investmentItem {
+        flex-wrap: wrap;
+    }
+    
+    .investmentValue {
+        margin-top: 15px;
+        margin-right: 0;
+        text-align: left;
+        width: 100%;
+    }
+    
+    .investmentActions {
+        margin-top: 15px;
+        width: 100%;
+        justify-content: flex-end;
+    }
+    
+    #investmentFormContainer {
+        grid-template-columns: 1fr;
+    }
+    
+    .formButtonsContainer {
+        grid-column: span 1;
+    }
+    
+    .floatingAddInvestmentButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .investmentStats {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .investmentMeta {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -6425,10 +7134,12 @@ button:active {
         <!-- Side Navigation -->
         <aside class="sidebar">
             <div class="logo">
-                <img src="C:\xampp\htdocs\transactions\GiFinTrack.png"  class="app-logo" />
+                <img src="../transactions/GiFinTrack.png" class="app-logo" />
               </div>
               
             <nav class="nav-menu">
+
+
                 <ul>
                     <li class="active">
                         <a href="#" data-page="dashboard">
@@ -6516,26 +7227,31 @@ button:active {
                     </li>
 
 
-                    <li>
-                        <a href="#" data-page="settings">
-                            <i class="fas fa-cog"></i>
-                            <span>Settings</span>
-                        </a>
-                    </li>
+                    
+
                     
                 </ul>
             </nav>
             <div class="user-profile">
                 <div class="avatar">
-                    <img src="placeholder-user.jpg" alt="User">
+                    
                 </div>
                 <div class="user-info">
-                    <span class="name">Sudharsan S</span>
-                    <span class="email">sudharsan.saravanank@gmail.com</span>
+                    
                 </div>
                 <button class="logout-btn">
                     <i class="fas fa-sign-out-alt"></i>
                 </button>
+<!-- Dark Mode Toggle with Icon -->
+<div id="darkModeToggleContainer" style="position: absolute; top: 80px; right: 117px; z-index: 999; display: flex; align-items: center; gap: 8px;">
+  <img id="themeIcon" src="https://img.icons8.com/ios-filled/24/sun--v1.png" alt="Theme Icon" style="width: 24px; height: 24px;">
+  
+  <label class="switch">
+    <input type="checkbox" id="darkModeToggle">
+    <span class="slider round"></span>
+  </label>
+</div>
+
             </div>
         </aside>
 
@@ -6558,7 +7274,7 @@ button:active {
                         <button class="close-modal">&times;</button>
                     </div>
                     <div class="modal-body">
-                        <form id="transactionForm" action="sumbit_transaction.php" method="POST">
+                        <form id="transactionForm" action="submit_transaction.php" method="POST">
                             <div class="form-group">
                                 <label>Transaction Type</label>
                                 <div class="transaction-type-tabs">
@@ -6920,7 +7636,7 @@ button:active {
             <div class="goal-modal-content">
               <span class="close" onclick="closeModal()">&times;</span>
               <h3>Add New Goal</h3>
-              <form id="goal-form">
+              <form id="goal-form" action="save_goal.php" method="POST">
                 <label>Goal Title</label>
                 <input type="text" id="goal-title" required />
           
@@ -6988,7 +7704,7 @@ button:active {
     <div class="budget-modal-content">
       <span class="close" onclick="closeBudgetModal()">&times;</span>
       <h3>Add Budget Entry</h3>
-      <form id="budget-form">
+      <form id="budget-form" action="save_budget_entry.php" method="POST">
         <label>Type</label>
         <select id="entry-type" required>
           <option value="income">Income</option>
@@ -7639,7 +8355,7 @@ button:active {
         <!-- Loan Form Section -->
         <section class="loan-form-section">
             <h2>Add New Loan</h2>
-            <form id="loan-form">
+            <form id="loan-form" action="add_loan.php" method="post">
                 <div class="form-group">
                     <label for="loan-name">Loan Name</label>
                     <input type="text" id="loan-name" placeholder="e.g., Car Loan, Mortgage" required>
@@ -8042,7 +8758,7 @@ button:active {
 <main class="main-content" id="stocksandinvestments-page">
      <header>
         <div class="container header-content">
-            <div class="logo">MarketWatch</div>
+            <div class="logo">Stocks & Investments </div>
             <div class="search-container">
                 <input type="text" class="search-input" id="symbolInput" placeholder="Search symbol (e.g., IBM, AAPL)" value="IBM">
                 <button class="search-button" id="searchBtn">
@@ -8107,6 +8823,237 @@ button:active {
                     <!-- Data will be inserted here by JavaScript -->
                 </tbody>
             </table>
+        </div>
+    </div>
+        
+    <div class="investmentsHeader">
+        <h1>Investments Portfolio</h1>
+        <button id="addInvestmentButton">+ Add Investment</button>
+    </div>
+
+    <!-- Summary Cards -->
+    <div class="investmentsSummaryCards">
+        <div class="investmentsSummaryCard">
+            <h3><i class="fas fa-chart-line"></i> Portfolio Value</h3>
+            <p id="totalPortfolioValueDisplay">₹0</p>
+            <div class="trend up">
+                <i class="fas fa-arrow-up"></i> <span id="portfolioChangePercentage">0%</span> this month
+            </div>
+        </div>
+        <div class="investmentsSummaryCard">
+            <h3><i class="fas fa-coins"></i> Stocks Value</h3>
+            <p id="stocksValueDisplay">₹0</p>
+            <div class="trend down">
+                <i class="fas fa-arrow-down"></i> <span id="stocksChangePercentage">0%</span> change
+            </div>
+        </div>
+        <div class="investmentsSummaryCard">
+            <h3><i class="fas fa-piggy-bank"></i> Mutual Funds</h3>
+            <p id="mutualFundsValueDisplay">₹0</p>
+            <div class="trend up">
+                <i class="fas fa-arrow-up"></i> <span id="mutualFundsChangePercentage">0%</span> change
+            </div>
+        </div>
+        <div class="investmentsSummaryCard">
+            <h3><i class="fas fa-percentage"></i> Annual Return</h3>
+            <p id="annualReturnPercentage">0%</p>
+            <div class="trend up">
+                <i class="fas fa-chart-bar"></i> vs. <span id="benchmarkReturnPercentage">7%</span> benchmark
+            </div>
+        </div>
+    </div>
+
+    <!-- Investments List -->
+    <div class="investmentsListSection">
+        <div class="investmentsListHeader">
+            <h2><i class="fas fa-list"></i> Your Investments</h2>
+            <div class="investmentsListControls">
+                <input type="text" id="investmentsSearchInput" placeholder="Search investments..." />
+                <select id="investmentTypeFilterSelect">
+                    <option value="all">All Types</option>
+                    <option value="stocks">Stocks</option>
+                    <option value="mutual-funds">Mutual Funds</option>
+                    <option value="etf">ETFs</option>
+                    <option value="bonds">Bonds</option>
+                    <option value="fd">Fixed Deposits</option>
+                    <option value="crypto">Crypto</option>
+                    <option value="other">Other</option>
+                </select>
+                <select id="investmentSortBySelect">
+                    <option value="value-asc">Value: Low to High</option>
+                    <option value="value-desc">Value: High to Low</option>
+                    <option value="date-asc">Purchase Date: Oldest</option>
+                    <option value="date-desc">Purchase Date: Newest</option>
+                    <option value="return-asc">Return: Low to High</option>
+                    <option value="return-desc">Return: High to Low</option>
+                    <option value="name-asc">Name: A-Z</option>
+                    <option value="name-desc">Name: Z-A</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="investmentsListContainer" id="investmentsListContainer">
+            <!-- Investments will be added here dynamically -->
+            <div class="emptyMessage">No investments added yet. Add your first investment above.</div>
+            
+            <!-- Sample Investment Item (for reference) -->
+            <div class="investmentItem" style="display:none;">
+                <div class="investmentIcon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="investmentDetails">
+                    <h3 class="investmentName">Reliance Industries</h3>
+                    <div class="investmentMeta">
+                        <span class="investmentType">Stock</span>
+                        <span class="investmentDate">Purchased: 15 Jan 2023</span>
+                    </div>
+                    <div class="investmentStats">
+                        <span class="investmentQuantity">10 shares</span>
+                        <span class="investmentBuyPrice">Avg: ₹2,450</span>
+                        <span class="investmentCurrentPrice">Current: ₹2,780</span>
+                    </div>
+                </div>
+                <div class="investmentValue">
+                    <div class="currentValue">₹27,800</div>
+                    <div class="investmentReturn positive">
+                        +13.5% <i class="fas fa-arrow-up"></i>
+                    </div>
+                </div>
+                <div class="investmentActions">
+                    <button class="editInvestmentButton"><i class="fas fa-edit"></i></button>
+                    <button class="deleteInvestmentButton"><i class="fas fa-trash"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Investment Analytics -->
+    <div class="investmentsAnalyticsSection">
+        <h2><i class="fas fa-chart-pie"></i> Portfolio Analytics</h2>
+        <div class="analyticsRow">
+            <div class="analyticsChart">
+                <canvas id="portfolioAllocationChartCanvas"></canvas>
+            </div>
+            <div class="analyticsChart">
+                <canvas id="returnsChartCanvas"></canvas>
+            </div>
+        </div>
+        
+        <div class="investmentTips">
+            <h3><i class="fas fa-lightbulb"></i> Investment Recommendations</h3>
+            <div class="tipItem">
+                <div class="tipIcon">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <div class="tipContent">
+                    <h4>Portfolio Rebalancing</h4>
+                    <p>Your portfolio is 78% equities. Consider rebalancing to maintain your target 60:40 equity:debt allocation.</p>
+                </div>
+            </div>
+            <div class="tipItem">
+                <div class="tipIcon">
+                    <i class="fas fa-hand-holding-usd"></i>
+                </div>
+                <div class="tipContent">
+                    <h4>Tax Saving Opportunity</h4>
+                    <p>You haven't utilized your ₹1.5L 80C limit. Consider ELSS funds for tax-efficient growth.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating action button for mobile -->
+    <button class="floatingAddInvestmentButton" id="floatingAddInvestmentButton">
+        <i class="fas fa-plus"></i>
+    </button>
+
+    <!-- Investment Modal -->
+    <div id="investmentModalOverlay" class="modalOverlay">
+        <div class="investmentModalContent">
+            <span class="closeModalButton">&times;</span>
+            <h2>Add New Investment</h2>
+            <form id="investmentFormContainer">
+                <div class="investmentFormGroup">
+                    <label for="investmentTypeSelect">Investment Type</label>
+                    <select id="investmentTypeSelect" required>
+                        <option value="">Select type</option>
+                        <option value="stock">Stock</option>
+                        <option value="mutual-fund">Mutual Fund</option>
+                        <option value="etf">ETF</option>
+                        <option value="bond">Bond</option>
+                        <option value="fd">Fixed Deposit</option>
+                        <option value="crypto">Cryptocurrency</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="investmentFormGroup">
+                    <label for="investmentNameInput">Investment Name</label>
+                    <input type="text" id="investmentNameInput" placeholder="e.g., Reliance Industries, Axis Bluechip Fund" required>
+                </div>
+                
+                <div class="investmentFormGroup">
+                    <label for="investmentSymbolInput">Symbol/ISIN (optional)</label>
+                    <input type="text" id="investmentSymbolInput" placeholder="e.g., RELIANCE, INF174K01LS2">
+                </div>
+                
+                <div class="investmentFormGroup">
+                    <label for="investmentDateInput">Purchase Date</label>
+                    <input type="date" id="investmentDateInput" required>
+                </div>
+                
+                <div class="investmentFormGroup amountInput">
+                    <label for="investmentQuantityInput">Quantity/Units</label>
+                    <input type="number" id="investmentQuantityInput" step="0.0001" placeholder="e.g., 10 or 45.25" required>
+                </div>
+                
+                <div class="investmentFormGroup amountInput">
+                    <label for="investmentBuyPriceInput">Buy Price per Unit (₹)</label>
+                    <span>₹</span>
+                    <input type="number" id="investmentBuyPriceInput" step="0.01" placeholder="0.00" required>
+                </div>
+                
+                <div class="investmentFormGroup amountInput">
+                    <label for="investmentCurrentPriceInput">Current Price per Unit (₹)</label>
+                    <span>₹</span>
+                    <input type="number" id="investmentCurrentPriceInput" step="0.01" placeholder="0.00">
+                </div>
+                
+                <div class="investmentFormGroup">
+                    <label for="investmentBrokerInput">Broker/Platform</label>
+                    <input type="text" id="investmentBrokerInput" placeholder="e.g., Zerodha, Groww, Bank Name">
+                </div>
+                
+                <div class="investmentFormGroup">
+                    <label for="investmentCategorySelect">Category/Sector</label>
+                    <select id="investmentCategorySelect">
+                        <option value="">Select category</option>
+                        <option value="large-cap">Large Cap</option>
+                        <option value="mid-cap">Mid Cap</option>
+                        <option value="small-cap">Small Cap</option>
+                        <option value="sectoral">Sectoral</option>
+                        <option value="index">Index</option>
+                        <option value="debt">Debt</option>
+                        <option value="hybrid">Hybrid</option>
+                        <option value="international">International</option>
+                    </select>
+                </div>
+                
+                <div class="investmentFormGroup">
+                    <label for="investmentDividendInput">Dividend Yield (%)</label>
+                    <input type="number" id="investmentDividendInput" step="0.01" placeholder="e.g., 1.5 for 1.5%">
+                </div>
+                
+                <div class="investmentFormGroup">
+                    <label for="investmentNotesTextarea">Notes</label>
+                    <textarea id="investmentNotesTextarea" placeholder="Any additional details about this investment"></textarea>
+                </div>
+                
+                <div class="formButtonsContainer">
+                    <button type="submit" class="submitFormButton">Save Investment</button>
+                    <button type="button" class="cancelFormButton">Cancel</button>
+                </div>
+            </form>
         </div>
     </div>
     </main>
@@ -8689,7 +9636,12 @@ button:active {
     <script src="https://cdn.jsdelivr.net/npm/@xenova/transformers"></script>
     <script src="https://cdn.jsdelivr.net/npm/@xenova/transformers/dist/transformers.min.js"></script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+       <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"></script>
+    
     <script>
+
+     
    document.addEventListener('DOMContentLoaded', function () {
             // === Page Navigation ===
             const pages = {
@@ -8825,9 +9777,41 @@ button:active {
             });
         
             // === Submit Transaction ===
-            document.getElementById('transactionForm').addEventListener('submit', function (e) {
-                e.preventDefault();
         
+            
+document.getElementById('transactionForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    if (!selectedCategory) {
+        alert('⚠️ Please select a category!');
+        return;
+    }
+
+     
+
+    const data = {
+        description: document.getElementById('description').value,
+        amount: parseFloat(document.getElementById('amount').value),
+        type: currentType,
+        category: selectedCategory,
+        date: document.getElementById('date').value
+    };
+
+    fetch('transactions/submit_transaction.php', { // Make sure the path is correct
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    })
+    .then(res => res.text())
+    .then(response => {
+        alert(response); // shows what the PHP returned
+        modalOverlay.classList.remove('active');
+        this.reset();
+        document.querySelectorAll('.category-option').forEach(opt => opt.classList.remove('selected'));
+    })
+    .catch(err => console.error('❌ Error:', err));
+
+     
                 const newTransaction = {
                     id: Date.now(),
                     description: document.getElementById('description').value,
@@ -8845,54 +9829,12 @@ button:active {
                 this.reset();
                 document.querySelectorAll('.category-option').forEach(opt => opt.classList.remove('selected'));
                 updateTransactionsPage();
-                updateAnalyticsPage(); // Add this to update analytics when new transaction is added
-            });
-            
-
-            document.getElementById('transactionForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const data = {
-        description: document.getElementById('description').value,
-        amount: parseFloat(document.getElementById('amount').value),
-        type: currentType,
-        category: selectedCategory,
-        date: document.getElementById('date').value
-    };
-
-    fetch('submit_transaction.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-    })
-    .then(res => res.text())
-    .then(response => {
-        console.log(response); // show success or error
-        alert(response);
-        modalOverlay.classList.remove('active');
-        this.reset();
-        document.querySelectorAll('.category-option').forEach(opt => opt.classList.remove('selected'));
-    })
-    .catch(err => console.error('❌ Error:', err));
+                updateAnalyticsPage();
 });
 
-     
-fetch('submit_transaction.php', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-})
-.then(response => response.text())
-.then(result => {
-    console.log(result);
-    alert(result);
-})
-.catch(error => {
-    console.error('❌ Error:', error);
-});
-
+  function saveTransactions() {
+                localStorage.setItem('transactions', JSON.stringify(transactions));
+            }
 
 
 
@@ -9473,6 +10415,9 @@ function openModal(isEdit = false, card = null) {
     document.getElementById('goal-target').value = card.dataset.target;
     document.getElementById('goal-saved').value = card.dataset.saved;
     document.getElementById('goal-date').value = card.dataset.date;
+    document.getElementById('goal-note').value = card.querySelector('p:last-of-type').innerText.replace("Note: ", "");
+    document.getElementById('goal-priority').value = card.querySelector('p:nth-of-type(4)').innerText.replace("Priority: ", "");
+    document.getElementById('goal-tag').value = card.querySelector('p:nth-of-type(5)').innerText.replace("Category: ", "");
   } else {
     editingCard = null;
     document.getElementById('goal-form').reset();
@@ -9542,6 +10487,28 @@ document.getElementById('goal-form').addEventListener('submit', function (event)
     editingCard.dataset.saved = saved;
     editingCard.dataset.date = date;
 
+    const id = editingCard.dataset.id;
+    const formData = new FormData();
+    formData.append("id", id);
+    formData.append("title", title);
+    formData.append("target", target);
+    formData.append("saved", saved);
+    formData.append("date", date);
+    formData.append("priority", priority);
+    formData.append("category", tag);
+    formData.append("note", note);
+
+    fetch("/transactions/update_goal.php", {
+      method: "POST",
+      body: formData
+    })
+    .then(res => res.text())
+    .then(data => {
+      if (data.trim() !== "success") {
+        alert("Goal updated visually, but DB update failed:\n" + data);
+      }
+    });
+
     const historyList = document.getElementById("goal-history-list");
     const existingHistory = Array.from(historyList.children);
     const existingItem = existingHistory.find(li => li.textContent.includes(title));
@@ -9576,6 +10543,34 @@ document.getElementById('goal-form').addEventListener('submit', function (event)
       document.getElementById("goal-history-list").appendChild(historyItem);
       showCompletionMessage(title);
     }
+
+    const formData = new FormData();
+    formData.append("title", title);
+    formData.append("target", target);
+    formData.append("saved", saved);
+    formData.append("date", date);
+    formData.append("priority", priority);
+    formData.append("category", tag);
+    formData.append("note", note);
+
+    fetch("/transactions/save_goal.php", {
+      method: "POST",
+      body: formData
+    })
+    .then(res => res.text())
+    .then(data => {
+      const insertedId = parseInt(data.trim());
+      if (!isNaN(insertedId)) {
+        card.dataset.id = insertedId;
+      } else {
+        alert("" + data);
+      }
+    });
+
+    const newGoal = { title, target, saved, date, priority, category: tag, note };
+    let goals = JSON.parse(localStorage.getItem("goals")) || [];
+    goals.push(newGoal);
+    localStorage.setItem("goals", JSON.stringify(goals));
   }
 
   closeModal();
@@ -9589,8 +10584,30 @@ function editGoal(button) {
 
 function deleteGoal(button) {
   const card = button.closest('.goal-card');
+  const title = card.dataset.title;
+  const id = card.dataset.id;
+
   card.remove();
   updateSummary();
+
+  let goals = JSON.parse(localStorage.getItem("goals")) || [];
+  goals = goals.filter(g => g.title !== title);
+  localStorage.setItem("goals", JSON.stringify(goals));
+
+  if (id) {
+    const formData = new FormData();
+    formData.append("id", id);
+    fetch("/transactions/delete_goal.php", {
+      method: "POST",
+      body: formData
+    })
+    .then(res => res.text())
+    .then(data => {
+      if (data.trim() !== "success") {
+        alert("Goal deleted visually, but DB deletion failed:\n" + data);
+      }
+    });
+  }
 }
 
 function togglePin(btn) {
@@ -9621,11 +10638,7 @@ function updateSummary() {
     const title = card.dataset.title || "";
 
     totalSaved += saved;
-
-    if (saved >= target) {
-      completedCount++;
-    }
-
+    if (saved >= target) completedCount++;
     if (saved > maxSaved) {
       maxSaved = saved;
       topGoalTitle = title;
@@ -9636,6 +10649,68 @@ function updateSummary() {
   document.getElementById("summary-complete").textContent = completedCount;
   document.getElementById("summary-top").textContent = topGoalTitle || "None";
 }
+
+
+// ✅ Load goals on page refresh from localStorage
+window.onload = function () {
+  const savedGoals = JSON.parse(localStorage.getItem("goals")) || [];
+  savedGoals.forEach(goal => {
+    const { title, target, saved, date, priority, category, note } = goal;
+
+    const percentage = Math.min(100, (saved / target) * 100).toFixed(0);
+    const today = new Date();
+    const targetDate = new Date(date);
+    const daysLeft = Math.ceil((targetDate - today) / (1000 * 60 * 60 * 24));
+    const overdue = daysLeft < 0;
+    const status = percentage >= 100 ? "Completed" : percentage >= 70 ? "On Track" : "Behind";
+    const statusClass = status === "Completed" ? "completed" : status === "On Track" ? "on-track" : "behind";
+
+    const card = document.createElement("div");
+    card.className = "goal-card";
+    card.dataset.title = title;
+    card.dataset.target = target;
+    card.dataset.saved = saved;
+    card.dataset.date = date;
+
+    card.innerHTML = `
+      <div class="goal-header-row">
+        <h3>${title}</h3>
+        <button class="pin-btn" onclick="togglePin(this)">📌</button>
+      </div>
+      <p><strong>₹${saved.toLocaleString()}</strong> saved of ₹${target.toLocaleString()}</p>
+      <div class="progress-bar">
+        <div class="progress" style="width: ${percentage}%;"></div>
+      </div>
+      <div class="goal-stats">
+        <span>${percentage}% complete</span>
+        <span>${overdue ? '⚠️ Overdue' : `${daysLeft} days left`}</span>
+      </div>
+      <div class="goal-meta">
+        <span>🎯 Target: ${date}</span>
+        <span class="status ${statusClass}">${status}</span>
+      </div>
+      <p><strong>Priority:</strong> ${priority}</p>
+      <p><strong>Category:</strong> ${category}</p>
+      <p><strong>Note:</strong> ${note || "No notes"}</p>
+      <div class="goal-actions">
+        <button onclick="editGoal(this)">Edit</button>
+        <button onclick="deleteGoal(this)">Delete</button>
+      </div>
+    `;
+
+    document.getElementById('goals-container').appendChild(card);
+
+    if (status === "Completed") {
+      const historyItem = document.createElement("li");
+      historyItem.textContent = `${title} - ₹${saved.toLocaleString()} saved by ${date}`;
+      document.getElementById("goal-history-list").appendChild(historyItem);
+    }
+  });
+
+  updateSummary();
+};
+
+
 function switchPage(pageId) {
     // Show the selected section, hide others
     document.querySelectorAll(".page-section").forEach(section => {
@@ -9685,50 +10760,44 @@ function closeBudgetModal() {
 }
 
 // Handle Budget Form Submission
+// Handle Budget Form Submission
 function handleBudgetSubmit(e) {
     e.preventDefault();
 
     const entry = {
-        id: editingBudgetId || Date.now(),
         type: document.getElementById('entry-type').value,
         category: document.getElementById('entry-category').value,
         amount: parseFloat(document.getElementById('entry-amount').value),
         note: document.getElementById('entry-note').value,
-        date: new Date().toISOString().split('T')[0] // Current date in YYYY-MM-DD format
+        date: new Date().toISOString().split('T')[0]
     };
 
-    if (editingBudgetId) {
-        // Update existing entry
-        const index = budgetData.findIndex(item => item.id === editingBudgetId);
-        if (index !== -1) {
-            budgetData[index] = entry;
+    // Send to PHP via fetch
+    fetch('/transactions/save_budget_entry.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(entry)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'success') {
+            // Also store in localStorage for now
+            entry.id = Date.now(); // temporary ID
+            budgetData.push(entry);
+            localStorage.setItem('budgetData', JSON.stringify(budgetData));
+            renderBudgetEntries();
+            updateBudgetSummary();
+            closeBudgetModal();
+            showBudgetPopup();
+        } else {
+            alert('❌ Failed to save entry: ' + data.message);
         }
-    } else {
-        // Add new entry
-        budgetData.push(entry);
-    }
-
-    // Save to localStorage
-    localStorage.setItem('budgetData', JSON.stringify(budgetData));
-
-    // Update UI
-    renderBudgetEntries();
-    updateBudgetSummary();
-    closeBudgetModal();
-    showBudgetPopup();
-
-    // ✅ Make sure we stay on budget page, no redirects
-    document.querySelectorAll('main.main-content').forEach(page => {
-        page.classList.remove('active');
-        page.style.display = 'none';
+    })
+    .catch(error => {
+        alert('❌ Server error: ' + error);
     });
-
-    const budgetPage = document.getElementById('budget-page');
-    budgetPage.classList.add('active');
-    budgetPage.style.display = 'block';
-
-    // Re-run page init to refresh listeners if needed
-    initBudgetPage();
 }
 
 // Show Budget Popup
@@ -10608,12 +11677,41 @@ document.addEventListener('DOMContentLoaded', function() {
             payments: []
         };
         
-        loans.push(newLoan);
-        saveLoans();
-        updateLoansList();
-        updateStats();
-        populateLoanSelect();
-        loanForm.reset();
+
+        
+       fetch('/transactions/add_loan.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newLoan)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('Loan saved to database!');
+
+            // Optional: Add to localStorage if still needed
+            newLoan.id = data.loanId;
+            newLoan.remainingBalance = newLoan.amount;
+            newLoan.payments = [];
+
+            loans.push(newLoan);
+            saveLoans();  // Optional
+            updateLoansList();
+            updateStats();
+            populateLoanSelect();
+            loanForm.reset();
+        } else {
+            alert('Error: ' + data.error);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Server error. Could not save loan.');
+    });
+
+
     }
     function initLoanManagerPage() {
     // Initialize loan data from localStorage
@@ -12951,6 +14049,547 @@ function nwtAddNewItem() {
     alert('This would open a form to add a new asset or liability in a full implementation.');
 }
 
+
+
+
+   
+
+
+    const toggle = document.getElementById("darkModeToggle");
+  const icon = document.getElementById("themeIcon");
+
+  // Apply saved theme on load
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+    toggle.checked = true;
+    icon.src = "https://img.icons8.com/ios-filled/24/moon-symbol.png"; // 🌙
+  } else {
+    icon.src = "https://img.icons8.com/ios-filled/24/sun--v1.png"; // 🌞
+  }
+
+  toggle.addEventListener("change", function () {
+    if (this.checked) {
+      document.body.classList.add("dark-mode");
+      localStorage.setItem("theme", "dark");
+      icon.src = "https://img.icons8.com/ios-filled/24/moon-symbol.png"; // 🌙
+    } else {
+      document.body.classList.remove("dark-mode");
+      localStorage.setItem("theme", "light");
+      icon.src = "https://img.icons8.com/ios-filled/24/sun--v1.png"; // 🌞
+    }
+  });
+
+
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // DOM Elements
+    const investmentsManagerPage = document.getElementById('investmentsManagerPage');
+    const addInvestmentButton = document.getElementById('addInvestmentButton');
+    const floatingAddInvestmentButton = document.getElementById('floatingAddInvestmentButton');
+    const investmentsListContainer = document.getElementById('investmentsListContainer');
+    const investmentModalOverlay = document.getElementById('investmentModalOverlay');
+    const closeModalButton = document.querySelector('.closeModalButton');
+    const cancelFormButton = document.querySelector('.cancelFormButton');
+    const investmentForm = document.getElementById('investmentFormContainer');
+    const investmentsSearchInput = document.getElementById('investmentsSearchInput');
+    const investmentTypeFilterSelect = document.getElementById('investmentTypeFilterSelect');
+    const investmentSortBySelect = document.getElementById('investmentSortBySelect');
+
+    // State variables
+    let investments = JSON.parse(localStorage.getItem('investments')) || [];
+    let isEditing = false;
+    let currentEditId = null;
+
+    // Initialize the page
+    initPage();
+
+    // Event Listeners
+    addInvestmentButton.addEventListener('click', openInvestmentModal);
+    floatingAddInvestmentButton.addEventListener('click', openInvestmentModal);
+    closeModalButton.addEventListener('click', closeInvestmentModal);
+    cancelFormButton.addEventListener('click', closeInvestmentModal);
+    investmentForm.addEventListener('submit', handleFormSubmit);
+    investmentsSearchInput.addEventListener('input', filterAndRenderInvestments);
+    investmentTypeFilterSelect.addEventListener('change', filterAndRenderInvestments);
+    investmentSortBySelect.addEventListener('change', filterAndRenderInvestments);
+
+    // Functions
+    function initPage() {
+        renderInvestments();
+        updateSummaryCards();
+        updatePortfolioAllocationChart();
+        updateReturnsChart();
+    }
+
+    function openInvestmentModal() {
+        investmentModalOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        resetForm();
+    }
+
+    function closeInvestmentModal() {
+        investmentModalOverlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+        isEditing = false;
+        currentEditId = null;
+    }
+
+    function resetForm() {
+        investmentForm.reset();
+        document.querySelector('h2').textContent = isEditing ? 'Edit Investment' : 'Add New Investment';
+        document.querySelector('.submitFormButton').textContent = isEditing ? 'Update Investment' : 'Save Investment';
+    }
+
+    function handleFormSubmit(e) {
+        e.preventDefault();
+        
+        const investmentData = {
+            id: isEditing ? currentEditId : Date.now().toString(),
+            type: document.getElementById('investmentTypeSelect').value,
+            name: document.getElementById('investmentNameInput').value,
+            symbol: document.getElementById('investmentSymbolInput').value,
+            date: document.getElementById('investmentDateInput').value,
+            quantity: parseFloat(document.getElementById('investmentQuantityInput').value),
+            buyPrice: parseFloat(document.getElementById('investmentBuyPriceInput').value),
+            currentPrice: parseFloat(document.getElementById('investmentCurrentPriceInput').value) || parseFloat(document.getElementById('investmentBuyPriceInput').value),
+            broker: document.getElementById('investmentBrokerInput').value,
+            category: document.getElementById('investmentCategorySelect').value,
+            dividendYield: parseFloat(document.getElementById('investmentDividendInput').value) || 0,
+            notes: document.getElementById('investmentNotesTextarea').value,
+            createdAt: isEditing ? investments.find(inv => inv.id === currentEditId).createdAt : new Date().toISOString(),
+            lastUpdated: new Date().toISOString()
+        };
+
+        if (isEditing) {
+            // Update existing investment
+            investments = investments.map(inv => 
+                inv.id === currentEditId ? investmentData : inv
+            );
+        } else {
+            // Add new investment
+            investments.push(investmentData);
+        }
+
+        saveInvestments();
+        renderInvestments();
+        updateSummaryCards();
+        updatePortfolioAllocationChart();
+        updateReturnsChart();
+        closeInvestmentModal();
+    }
+
+    function saveInvestments() {
+        localStorage.setItem('investments', JSON.stringify(investments));
+    }
+
+    function renderInvestments() {
+        filterAndRenderInvestments();
+    }
+
+    function filterAndRenderInvestments() {
+        const searchTerm = investmentsSearchInput.value.toLowerCase();
+        const typeFilter = investmentTypeFilterSelect.value;
+        const sortBy = investmentSortBySelect.value;
+        
+        // Filter investments
+        let filteredInvestments = investments.filter(investment => {
+            const matchesSearch = investment.name.toLowerCase().includes(searchTerm) || 
+                                (investment.symbol && investment.symbol.toLowerCase().includes(searchTerm));
+            const matchesType = typeFilter === 'all' || investment.type.replace('-', '') === typeFilter.replace('-', '');
+            return matchesSearch && matchesType;
+        });
+        
+        // Sort investments
+        filteredInvestments.sort((a, b) => {
+            switch (sortBy) {
+                case 'value-asc':
+                    return (a.quantity * a.currentPrice) - (b.quantity * b.currentPrice);
+                case 'value-desc':
+                    return (b.quantity * b.currentPrice) - (a.quantity * a.currentPrice);
+                case 'date-asc':
+                    return new Date(a.date) - new Date(b.date);
+                case 'date-desc':
+                    return new Date(b.date) - new Date(a.date);
+                case 'return-asc':
+                    return calculateReturnPercentage(a) - calculateReturnPercentage(b);
+                case 'return-desc':
+                    return calculateReturnPercentage(b) - calculateReturnPercentage(a);
+                case 'name-asc':
+                    return a.name.localeCompare(b.name);
+                case 'name-desc':
+                    return b.name.localeCompare(a.name);
+                default:
+                    return 0;
+            }
+        });
+        
+        // Render investments
+        if (filteredInvestments.length === 0) {
+            investmentsListContainer.innerHTML = '<div class="emptyMessage">No investments found matching your criteria.</div>';
+            return;
+        }
+        
+        investmentsListContainer.innerHTML = '';
+        
+        filteredInvestments.forEach(investment => {
+            const investmentItem = createInvestmentElement(investment);
+            investmentsListContainer.appendChild(investmentItem);
+        });
+    }
+
+    function createInvestmentElement(investment) {
+        const investmentItem = document.createElement('div');
+        investmentItem.className = 'investmentItem';
+        investmentItem.dataset.id = investment.id;
+        
+        const currentValue = investment.quantity * investment.currentPrice;
+        const buyValue = investment.quantity * investment.buyPrice;
+        const returnAmount = currentValue - buyValue;
+        const returnPercentage = (returnAmount / buyValue) * 100;
+        
+        const iconClass = getIconClassForInvestmentType(investment.type);
+        
+        investmentItem.innerHTML = `
+            <div class="investmentIcon">
+                <i class="fas ${iconClass}"></i>
+            </div>
+            <div class="investmentDetails">
+                <h3 class="investmentName">${investment.name}</h3>
+                <div class="investmentMeta">
+                    <span class="investmentType">${formatInvestmentType(investment.type)}</span>
+                    <span class="investmentDate">Purchased: ${formatDate(investment.date)}</span>
+                </div>
+                <div class="investmentStats">
+                    <span class="investmentQuantity">${investment.quantity} ${investment.type === 'mutual-fund' || investment.type === 'etf' ? 'units' : 'shares'}</span>
+                    <span class="investmentBuyPrice">Avg: ₹${investment.buyPrice.toLocaleString('en-IN')}</span>
+                    <span class="investmentCurrentPrice">Current: ₹${investment.currentPrice.toLocaleString('en-IN')}</span>
+                </div>
+            </div>
+            <div class="investmentValue">
+                <div class="currentValue">₹${currentValue.toLocaleString('en-IN')}</div>
+                <div class="investmentReturn ${returnAmount >= 0 ? 'positive' : 'negative'}">
+                    ${returnAmount >= 0 ? '+' : ''}${returnPercentage.toFixed(1)}% <i class="fas fa-arrow-${returnAmount >= 0 ? 'up' : 'down'}"></i>
+                </div>
+            </div>
+            <div class="investmentActions">
+                <button class="editInvestmentButton"><i class="fas fa-edit"></i></button>
+                <button class="deleteInvestmentButton"><i class="fas fa-trash"></i></button>
+            </div>
+        `;
+        
+        // Add event listeners to action buttons
+        investmentItem.querySelector('.editInvestmentButton').addEventListener('click', () => editInvestment(investment.id));
+        investmentItem.querySelector('.deleteInvestmentButton').addEventListener('click', () => deleteInvestment(investment.id));
+        
+        return investmentItem;
+    }
+
+    function editInvestment(id) {
+        const investment = investments.find(inv => inv.id === id);
+        if (!investment) return;
+        
+        isEditing = true;
+        currentEditId = id;
+        
+        // Fill the form with investment data
+        document.getElementById('investmentTypeSelect').value = investment.type;
+        document.getElementById('investmentNameInput').value = investment.name;
+        document.getElementById('investmentSymbolInput').value = investment.symbol || '';
+        document.getElementById('investmentDateInput').value = investment.date;
+        document.getElementById('investmentQuantityInput').value = investment.quantity;
+        document.getElementById('investmentBuyPriceInput').value = investment.buyPrice;
+        document.getElementById('investmentCurrentPriceInput').value = investment.currentPrice;
+        document.getElementById('investmentBrokerInput').value = investment.broker || '';
+        document.getElementById('investmentCategorySelect').value = investment.category || '';
+        document.getElementById('investmentDividendInput').value = investment.dividendYield || '';
+        document.getElementById('investmentNotesTextarea').value = investment.notes || '';
+        
+        openInvestmentModal();
+    }
+
+    function deleteInvestment(id) {
+        if (confirm('Are you sure you want to delete this investment?')) {
+            investments = investments.filter(inv => inv.id !== id);
+            saveInvestments();
+            renderInvestments();
+            updateSummaryCards();
+            updatePortfolioAllocationChart();
+            updateReturnsChart();
+        }
+    }
+
+    function updateSummaryCards() {
+        if (investments.length === 0) {
+            // Reset all summary cards to zero
+            document.getElementById('totalPortfolioValueDisplay').textContent = '₹0';
+            document.getElementById('stocksValueDisplay').textContent = '₹0';
+            document.getElementById('mutualFundsValueDisplay').textContent = '₹0';
+            document.getElementById('annualReturnPercentage').textContent = '0%';
+            document.getElementById('portfolioChangePercentage').textContent = '0%';
+            document.getElementById('stocksChangePercentage').textContent = '0%';
+            document.getElementById('mutualFundsChangePercentage').textContent = '0%';
+            return;
+        }
+        
+        // Calculate total portfolio value
+        const totalPortfolioValue = investments.reduce((sum, inv) => sum + (inv.quantity * inv.currentPrice), 0);
+        document.getElementById('totalPortfolioValueDisplay').textContent = `₹${totalPortfolioValue.toLocaleString('en-IN')}`;
+        
+        // Calculate stocks value
+        const stocksValue = investments
+            .filter(inv => inv.type === 'stock')
+            .reduce((sum, inv) => sum + (inv.quantity * inv.currentPrice), 0);
+        document.getElementById('stocksValueDisplay').textContent = `₹${stocksValue.toLocaleString('en-IN')}`;
+        
+        // Calculate mutual funds value
+        const mutualFundsValue = investments
+            .filter(inv => inv.type === 'mutual-fund')
+            .reduce((sum, inv) => sum + (inv.quantity * inv.currentPrice), 0);
+        document.getElementById('mutualFundsValueDisplay').textContent = `₹${mutualFundsValue.toLocaleString('en-IN')}`;
+        
+        // Calculate annual return (simplified - would normally use time-weighted return)
+        const totalBuyValue = investments.reduce((sum, inv) => sum + (inv.quantity * inv.buyPrice), 0);
+        const totalCurrentValue = investments.reduce((sum, inv) => sum + (inv.quantity * inv.currentPrice), 0);
+        const totalReturnPercentage = ((totalCurrentValue - totalBuyValue) / totalBuyValue) * 100;
+        document.getElementById('annualReturnPercentage').textContent = `${totalReturnPercentage.toFixed(1)}%`;
+        
+        // For demo purposes, set some random changes
+        document.getElementById('portfolioChangePercentage').textContent = `${(Math.random() * 5).toFixed(1)}%`;
+        document.getElementById('stocksChangePercentage').textContent = `${(Math.random() * 8 - 2).toFixed(1)}%`;
+        document.getElementById('mutualFundsChangePercentage').textContent = `${(Math.random() * 4).toFixed(1)}%`;
+    }
+
+    function updatePortfolioAllocationChart() {
+        const ctx = document.getElementById('portfolioAllocationChartCanvas').getContext('2d');
+        
+        // Group investments by type
+        const typeGroups = {};
+        investments.forEach(inv => {
+            const type = formatInvestmentType(inv.type);
+            if (!typeGroups[type]) {
+                typeGroups[type] = 0;
+            }
+            typeGroups[type] += inv.quantity * inv.currentPrice;
+        });
+        
+        const labels = Object.keys(typeGroups);
+        const data = Object.values(typeGroups);
+        const backgroundColors = generateColors(labels.length);
+        
+        // Destroy previous chart if it exists
+        if (window.portfolioAllocationChart) {
+            window.portfolioAllocationChart.destroy();
+        }
+        
+        if (investments.length === 0) {
+            // Show empty state
+            ctx.font = '16px Arial';
+            ctx.fillStyle = '#999';
+            ctx.textAlign = 'center';
+            ctx.fillText('No investment data available', ctx.canvas.width / 2, ctx.canvas.height / 2);
+            return;
+        }
+        
+        window.portfolioAllocationChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: labels,
+                datasets: [{
+                    data: data,
+                    backgroundColor: backgroundColors,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const label = context.label || '';
+                                const value = context.raw || 0;
+                                const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                const percentage = Math.round((value / total) * 100);
+                                return `${label}: ₹${value.toLocaleString('en-IN')} (${percentage}%)`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    function updateReturnsChart() {
+        const ctx = document.getElementById('returnsChartCanvas').getContext('2d');
+        
+        // For demo purposes, generate some historical data
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        const currentMonth = new Date().getMonth();
+        const labels = months.slice(0, currentMonth + 1);
+        
+        // Generate random returns data
+        const returnsData = labels.map((_, i) => {
+            if (i === 0) return 0;
+            return (Math.random() * 10 - 2); // Random returns between -2% and 8%
+        });
+        
+        // Calculate cumulative returns
+        const cumulativeReturns = returnsData.reduce((acc, curr, i) => {
+            if (i === 0) return [0];
+            const prev = acc[i - 1];
+            acc.push(prev + curr);
+            return acc;
+        }, []);
+        
+        // Destroy previous chart if it exists
+        if (window.returnsChart) {
+            window.returnsChart.destroy();
+        }
+        
+        if (investments.length === 0) {
+            // Show empty state
+            ctx.font = '16px Arial';
+            ctx.fillStyle = '#999';
+            ctx.textAlign = 'center';
+            ctx.fillText('No investment data available', ctx.canvas.width / 2, ctx.canvas.height / 2);
+            return;
+        }
+        
+        window.returnsChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Monthly Return (%)',
+                    data: returnsData,
+                    borderColor: '#3498db',
+                    backgroundColor: 'rgba(52, 152, 219, 0.1)',
+                    borderWidth: 2,
+                    tension: 0.3,
+                    yAxisID: 'y'
+                }, {
+                    label: 'Cumulative Return (%)',
+                    data: cumulativeReturns,
+                    borderColor: '#2ecc71',
+                    backgroundColor: 'rgba(46, 204, 113, 0.1)',
+                    borderWidth: 2,
+                    tension: 0.3,
+                    yAxisID: 'y1'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        title: {
+                            display: true,
+                            text: 'Monthly Return (%)'
+                        }
+                    },
+                    y1: {
+                        type: 'linear',
+                        display: true,
+                        position: 'right',
+                        title: {
+                            display: true,
+                            text: 'Cumulative Return (%)'
+                        },
+                        grid: {
+                            drawOnChartArea: false
+                        }
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                label += `${context.parsed.y.toFixed(1)}%`;
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    // Helper functions
+    function formatInvestmentType(type) {
+        const typeMap = {
+            'stock': 'Stock',
+            'mutual-fund': 'Mutual Fund',
+            'etf': 'ETF',
+            'bond': 'Bond',
+            'fd': 'Fixed Deposit',
+            'crypto': 'Cryptocurrency',
+            'other': 'Other'
+        };
+        return typeMap[type] || type;
+    }
+
+    function getIconClassForInvestmentType(type) {
+        const iconMap = {
+            'stock': 'fa-chart-line',
+            'mutual-fund': 'fa-coins',
+            'etf': 'fa-chart-pie',
+            'bond': 'fa-file-invoice-dollar',
+            'fd': 'fa-piggy-bank',
+            'crypto': 'fa-bitcoin',
+            'other': 'fa-wallet'
+        };
+        return iconMap[type] || 'fa-wallet';
+    }
+
+    function formatDate(dateString) {
+        const options = { year: 'numeric', month: 'short', day: 'numeric' };
+        return new Date(dateString).toLocaleDateString('en-IN', options);
+    }
+
+    function calculateReturnPercentage(investment) {
+        const buyValue = investment.quantity * investment.buyPrice;
+        const currentValue = investment.quantity * investment.currentPrice;
+        return ((currentValue - buyValue) / buyValue) * 100;
+    }
+
+    function generateColors(count) {
+        const colors = [];
+        const hueStep = 360 / count;
+        
+        for (let i = 0; i < count; i++) {
+            const hue = i * hueStep;
+            colors.push(`hsl(${hue}, 70%, 60%)`);
+        }
+        
+        return colors;
+    }
+
+    // Initialize Chart.js if it's not already loaded
+    if (typeof Chart === 'undefined') {
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/chart.js';
+        script.onload = function() {
+            updatePortfolioAllocationChart();
+            updateReturnsChart();
+        };
+        document.head.appendChild(script);
+    } else {
+        updatePortfolioAllocationChart();
+        updateReturnsChart();
+    }
+});
         </script>
     
 
