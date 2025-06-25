@@ -262,6 +262,107 @@
     transition: var(--transition);
 }
 
+        /* ======================
+   MOBILE RESPONSIVE STYLES
+   ====================== */
+
+@media (max-width: 768px) {
+    /* Sidebar adjustments for mobile */
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+        width: 280px;
+        height: 100vh;
+        box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    
+    /* Overlay when sidebar is open */
+    .sidebar-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    .sidebar-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    /* Hamburger menu adjustments */
+    .hamburger-toggle {
+        display: block;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        z-index: 1001;
+        background: var(--sidebar-bg);
+        border-radius: 4px;
+        padding: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    /* Collapsed state adjustments for mobile */
+    .sidebar.collapsed {
+        width: 70px;
+    }
+    
+    /* User profile adjustments */
+    .user-profile {
+        padding: 1rem;
+    }
+    
+    /* Quick action button adjustments */
+    .quick-action {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .sidebar.collapsed .quick-action {
+        transform: translateX(0);
+    }
+    
+    /* Ensure content doesn't get hidden behind sidebar */
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* Smaller mobile devices */
+@media (max-width: 480px) {
+    .sidebar {
+        width: 260px;
+    }
+    
+    .sidebar.collapsed {
+        width: 60px;
+    }
+    
+    .nav-menu li a {
+        padding: 0.75rem 1rem;
+    }
+    
+    .hamburger-toggle {
+        top: 10px;
+        left: 10px;
+    }
+}
+
 /* Navigation Menu */
 .nav-menu {
     display: flex;
@@ -337,7 +438,149 @@
     background: var(--accent-color);
     border-radius: 0 4px 4px 0;
 }
+/* ======================
+   NAV MENU MOBILE STYLES
+   ====================== */
 
+@media (max-width: 768px) {
+    .nav-menu {
+        padding: 0.5rem 0;
+        height: calc(100vh - 150px);
+        overflow-y: auto;
+    }
+    
+    .nav-menu ul {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .nav-menu li {
+        margin: 0.1rem 0;
+    }
+    
+    .nav-menu li a {
+        padding: 0.8rem 1.5rem;
+        margin-right: 0;
+        border-radius: 0;
+        justify-content: flex-start;
+    }
+    
+    .nav-menu li a i {
+        font-size: 1.2rem;
+        margin-right: 1rem;
+        min-width: 24px;
+    }
+    
+    .nav-menu li a span {
+        font-size: 0.9rem;
+    }
+    
+    /* Active state adjustments */
+    .nav-menu li.active a {
+        transform: none;
+        box-shadow: inset 4px 0 0 var(--accent-color);
+    }
+    
+    .nav-menu li.active::before {
+        display: none;
+    }
+    
+    /* Collapsed state adjustments */
+    .sidebar.collapsed .nav-menu li a {
+        justify-content: center;
+        padding: 0.9rem 0;
+    }
+    
+    .sidebar.collapsed .nav-menu li a i {
+        margin-right: 0;
+        font-size: 1.3rem;
+    }
+    
+    /* Tooltip adjustments for mobile */
+    .sidebar.collapsed .nav-menu li a::after {
+        left: auto;
+        right: 100%;
+        margin-left: 0;
+        margin-right: 15px;
+    }
+    
+    .sidebar.collapsed .nav-menu li a:hover::after {
+        margin-right: 20px;
+    }
+    
+    /* Scrollbar styling for mobile menu */
+    .nav-menu::-webkit-scrollbar {
+        width: 4px;
+    }
+    
+    .nav-menu::-webkit-scrollbar-thumb {
+        background-color: rgba(0,0,0,0.2);
+    }
+}
+
+/* Smaller devices (phones) */
+@media (max-width: 480px) {
+    .nav-menu li a {
+        padding: 0.7rem 1rem;
+    }
+    
+    .nav-menu li a i {
+        font-size: 1.1rem;
+        margin-right: 0.8rem;
+    }
+    
+    .nav-menu li a span {
+        font-size: 0.85rem;
+    }
+    
+    .sidebar.collapsed .nav-menu li a {
+        padding: 0.8rem 0;
+    }
+    
+    /* Reduce font sizes further for very small screens */
+    @media (max-height: 600px) {
+        .nav-menu li a span {
+            font-size: 0.8rem;
+        }
+        
+        .nav-menu li a i {
+            font-size: 1rem;
+        }
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+    .nav-menu {
+        height: calc(100vh - 120px);
+    }
+    
+    .nav-menu li a {
+        padding: 0.6rem 1rem;
+    }
+}
+
+/* Animation improvements for mobile */
+@media (max-width: 768px) {
+    .nav-menu li a {
+        transition: all 0.2s ease;
+    }
+    
+    .nav-menu li a:hover {
+        transform: translateX(3px);
+    }
+    
+    /* Pulse animation for active item */
+    @keyframes mobilePulse {
+        0% { box-shadow: inset 4px 0 0 var(--accent-color); }
+        50% { box-shadow: inset 6px 0 0 var(--accent-color); }
+        100% { box-shadow: inset 4px 0 0 var(--accent-color); }
+    }
+    
+    .nav-menu li.active a {
+        animation: mobilePulse 1.5s infinite;
+    }
+}
 /* Divider */
 .sidebar-divider {
     height: 1px;
@@ -359,6 +602,117 @@
     width: 50%;
     height: 1px;
     background-color: var(--primary-light);
+}
+        /* ======================
+   SIDEBAR OVERLAY STYLES
+   ====================== */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Below sidebar but above other content */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ======================
+   MOBILE SIDEBAR STYLES
+   ====================== */
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+        width: 280px;
+        height: 100vh;
+        box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    
+    /* Hamburger menu adjustments */
+    .hamburger-toggle {
+        display: block;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        z-index: 1001;
+        background: var(--sidebar-bg);
+        border-radius: 4px;
+        padding: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    /* Nav menu adjustments */
+    .nav-menu {
+        padding: 0.5rem 0;
+        height: calc(100vh - 150px);
+        overflow-y: auto;
+    }
+    
+    .nav-menu ul {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .nav-menu li {
+        margin: 0.1rem 0;
+    }
+    
+    .nav-menu li a {
+        padding: 0.8rem 1.5rem;
+        margin-right: 0;
+        border-radius: 0;
+        justify-content: flex-start;
+    }
+    
+    .nav-menu li a i {
+        font-size: 1.2rem;
+        margin-right: 1rem;
+        min-width: 24px;
+    }
+    
+    /* Active state adjustments */
+    .nav-menu li.active a {
+        transform: none;
+        box-shadow: inset 4px 0 0 var(--accent-color);
+    }
+    
+    .nav-menu li.active::before {
+        display: none;
+    }
+}
+
+/* Smaller devices (phones) */
+@media (max-width: 480px) {
+    .sidebar {
+        width: 260px;
+    }
+    
+    .nav-menu li a {
+        padding: 0.7rem 1rem;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+    .nav-menu {
+        height: calc(100vh - 120px);
+    }
 }
 
 /* User Profile Section */
@@ -14819,6 +15173,64 @@ function nwtAddNewItem() {
         updatePortfolioAllocationChart();
         updateReturnsChart();
     }
+});
+
+        // Close mobile menu when a nav item is clicked
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', function() {
+        if (window.innerWidth <= 768) {
+            document.querySelector('.sidebar').classList.remove('active');
+            document.querySelector('.sidebar-overlay').classList.remove('active');
+        }
+    });
+});
+
+// Handle window resize to properly manage mobile/desktop states
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        // Ensure sidebar is visible on desktop
+        document.querySelector('.sidebar').classList.add('active');
+        document.querySelector('.sidebar-overlay').classList.remove('active');
+    }
+});
+
+        // Add this JavaScript to your project
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerToggle = document.querySelector('.hamburger-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    const overlay = document.querySelector('.sidebar-overlay');
+    
+    // Toggle sidebar and overlay
+    hamburgerToggle.addEventListener('click', function() {
+        sidebar.classList.toggle('active');
+        overlay.classList.toggle('active');
+    });
+    
+    // Close sidebar when overlay is clicked
+    overlay.addEventListener('click', function() {
+        sidebar.classList.remove('active');
+        overlay.classList.remove('active');
+    });
+    
+    // Close sidebar when a nav item is clicked
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        });
+    });
+    
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            // Reset to desktop styles
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            sidebar.style.transform = '';
+        }
+    });
 });
         </script>
     
